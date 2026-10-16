@@ -86,4 +86,4 @@ Proyek menghasilkan prototipe Flutter resep makanan dengan navigasi tab dan hala
 
 - Source code dan petunjuk menjalankan aplikasi: `README.md`.
 - Tangkapan layar hasil implementasi: **[tambahkan setelah menjalankan aplikasi]**.
-- Tautan repositori GitHub: **[tambahkan setelah repositori dibuat]**.
+- Tautan repositori GitHub: https://github.com/mustikaprmataputrii/resep-nusantara (branch `main`).
