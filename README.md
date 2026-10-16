@@ -48,4 +48,4 @@ Favorit saat ini disimpan dalam state selama aplikasi aktif. Pengembangan beriku
 
 ## Laporan UTS
 
-Draf laporan tersedia sebagai `Laporan_UTS_Rasa_Nusantara.pdf`, dengan sumber HTML yang dapat diedit. Sebelum dikumpulkan, lengkapi NIM, kelas, fakultas/logo, tambahkan screenshot halaman Jelajah dan Detail, lalu unggah PDF final ke Google Drive.
+Draf laporan tersedia sebagai `Laporan_UTS_Rasa_Nusantara.pdf`, mengikuti gaya laporan pada template praktikum yang diberikan. Sebelum dikumpulkan, tambahkan logo resmi fakultas dan screenshot halaman Jelajah serta Detail, lalu unggah PDF final ke Google Drive.

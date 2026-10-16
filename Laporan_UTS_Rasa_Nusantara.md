@@ -1,6 +1,6 @@
 # Laporan UTS Mobile Programming — Rasa Nusantara
 
-> Lengkapi NIM, kelas, dan logo fakultas sebelum laporan dikumpulkan. Tambahkan screenshot aplikasi pada bagian 3 dan 4 setelah aplikasi dijalankan pada perangkat/emulator.
+> Laporan mengikuti susunan tugas UTS dan gaya visual template praktikum yang diberikan. Tambahkan logo resmi fakultas dan screenshot halaman Jelajah/Detail sebelum dikumpulkan.
 
 ## Halaman Judul
 
