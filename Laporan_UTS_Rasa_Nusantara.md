@@ -9,9 +9,12 @@ Laporan Ujian Tengah Semester Mobile Programming
 Semester Ganjil 2025/2026
 
 - Nama: Sri Mustika Indah Permata Putri
-- NIM: **[lengkapi]**
-- Kelas: **[lengkapi]**
-- Fakultas/Universitas: **[lengkapi]**
+- NIM: 240605110159
+- Kelas: L
+- Jurusan: Teknik Informatika
+- Fakultas: Sains dan Teknologi
+- Universitas: Universitas Islam Negeri Maulana Malik Ibrahim Malang
+- Tanggal: 16 Oktober 2026
 - Logo fakultas: **[sisipkan logo resmi]**
 
 ## 1. Pendahuluan
