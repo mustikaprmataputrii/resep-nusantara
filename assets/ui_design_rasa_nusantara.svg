@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#faf8f2"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#292d25">Rancangan Antarmuka · Rasa Nusantara</text>
+  <text x="600" y="84" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#888a80">Wireframe visual untuk Beranda, Jelajah, dan Detail Resep</text>
+  <g font-family="Arial,sans-serif">
+    <g transform="translate(95 122)">
+      <rect width="280" height="560" rx="34" fill="#292d25"/><rect x="9" y="9" width="262" height="542" rx="27" fill="#faf8f2"/>
+      <rect x="96" y="15" width="88" height="13" rx="7" fill="#292d25"/>
+      <text x="27" y="69" font-size="11" font-weight="700" letter-spacing="1.5" fill="#687354">RASA NUSANTARA</text><text x="27" y="105" font-size="23" font-weight="700" fill="#292d25">Mau masak apa</text><text x="27" y="132" font-size="23" font-weight="700" fill="#292d25">hari ini?</text>
+      <rect x="24" y="153" width="232" height="43" rx="13" fill="#fff" stroke="#eceae2"/><circle cx="43" cy="174" r="7" fill="none" stroke="#888a80" stroke-width="2"/><path d="M48 179l6 6" stroke="#888a80" stroke-width="2"/><text x="64" y="179" font-size="12" fill="#888a80">Cari resep atau bahan...</text>
+      <rect x="24" y="211" width="232" height="143" rx="18" fill="#e9e4d5"/><text x="40" y="242" font-size="9" font-weight="700" letter-spacing="1" fill="#687354">RESEP PILIHAN</text><text x="40" y="274" font-size="18" font-weight="700" fill="#292d25">Hangatnya</text><text x="40" y="296" font-size="18" font-weight="700" fill="#292d25">Rendang Padang</text><text x="204" y="321" text-anchor="middle" font-size="67">🍛</text>
+      <text x="25" y="389" font-size="16" font-weight="700" fill="#292d25">Jelajahi kategori</text>
+      <g fill="#fff" stroke="#eceae2"><rect x="24" y="404" width="68" height="66" rx="13"/><rect x="101" y="404" width="68" height="66" rx="13"/><rect x="178" y="404" width="78" height="66" rx="13"/></g><text x="58" y="433" text-anchor="middle" font-size="20">🍳</text><text x="135" y="433" text-anchor="middle" font-size="20">🍱</text><text x="217" y="433" text-anchor="middle" font-size="20">🌙</text><text x="58" y="454" text-anchor="middle" font-size="9" fill="#292d25">Sarapan</text><text x="135" y="454" text-anchor="middle" font-size="9" fill="#292d25">Siang</text><text x="217" y="454" text-anchor="middle" font-size="9" fill="#292d25">Malam</text>
+      <text x="25" y="501" font-size="16" font-weight="700" fill="#292d25">Lagi populer</text><rect x="24" y="513" width="232" height="28" rx="12" fill="#fff"/><text x="35" y="533" font-size="11" fill="#292d25">🍲  Soto Ayam · Jawa Timur</text>
+      <text x="140" y="580" text-anchor="middle" font-size="13" font-weight="700" fill="#687354">01 · BERANDA</text>
+    </g>
+    <g transform="translate(460 122)">
+      <rect width="280" height="560" rx="34" fill="#292d25"/><rect x="9" y="9" width="262" height="542" rx="27" fill="#faf8f2"/><rect x="96" y="15" width="88" height="13" rx="7" fill="#292d25"/>
+      <text x="25" y="74" font-size="23" font-weight="700" fill="#292d25">Jelajahi resep</text><text x="25" y="98" font-size="12" fill="#888a80">Ide masakan untuk setiap suasana.</text>
+      <rect x="24" y="115" width="232" height="43" rx="13" fill="#fff" stroke="#eceae2"/><text x="40" y="142" font-size="12" fill="#888a80">⌕  Cari nama atau daerah...</text>
+      <rect x="24" y="171" width="62" height="28" rx="14" fill="#e8ebdd"/><text x="55" y="189" text-anchor="middle" font-size="10" fill="#687354">Semua</text><rect x="92" y="171" width="80" height="28" rx="14" fill="#fff" stroke="#eceae2"/><text x="132" y="189" text-anchor="middle" font-size="10" fill="#888a80">Sarapan</text><rect x="178" y="171" width="78" height="28" rx="14" fill="#fff" stroke="#eceae2"/><text x="217" y="189" text-anchor="middle" font-size="10" fill="#888a80">Makan siang</text>
+      <g fill="#fff" stroke="#eceae2"><rect x="24" y="215" width="232" height="91" rx="15"/><rect x="24" y="316" width="232" height="91" rx="15"/><rect x="24" y="417" width="232" height="91" rx="15"/></g><g font-size="43"><text x="38" y="275">🍛</text><text x="38" y="376">🍲</text><text x="38" y="477">🥗</text></g><g font-size="12" font-weight="700" fill="#292d25"><text x="101" y="247">Rendang Padang</text><text x="101" y="348">Soto Ayam</text><text x="101" y="449">Gado-Gado</text></g><g font-size="10" fill="#888a80"><text x="101" y="268">Sumatera Barat · 2 jam 30 mnt</text><text x="101" y="369">Jawa Timur · 55 menit</text><text x="101" y="470">Jakarta · 35 menit</text></g>
+      <text x="140" y="580" text-anchor="middle" font-size="13" font-weight="700" fill="#687354">02 · JELAJAH</text>
+    </g>
+    <g transform="translate(825 122)">
+      <rect width="280" height="560" rx="34" fill="#292d25"/><rect x="9" y="9" width="262" height="542" rx="27" fill="#faf8f2"/><rect x="96" y="15" width="88" height="13" rx="7" fill="#292d25"/>
+      <rect x="10" y="35" width="260" height="190" rx="22" fill="#e9e4d5"/><text x="140" y="174" text-anchor="middle" font-size="100">🍛</text><circle cx="40" cy="61" r="17" fill="#fff"/><text x="40" y="67" text-anchor="middle" font-size="17" fill="#292d25">‹</text>
+      <text x="26" y="259" font-size="10" font-weight="700" letter-spacing="1" fill="#687354">MAKAN SIANG</text><text x="26" y="291" font-size="25" font-weight="700" fill="#292d25">Rendang Padang</text><text x="26" y="315" font-size="12" fill="#888a80">⌖  Sumatera Barat</text><text x="26" y="350" font-size="12" fill="#66685f">Daging sapi empuk yang dimasak</text><text x="26" y="369" font-size="12" fill="#66685f">perlahan bersama santan dan rempah.</text>
+      <rect x="25" y="389" width="69" height="38" rx="11" fill="#fff" stroke="#eceae2"/><rect x="103" y="389" width="69" height="38" rx="11" fill="#fff" stroke="#eceae2"/><rect x="181" y="389" width="69" height="38" rx="11" fill="#fff" stroke="#eceae2"/><text x="59" y="413" text-anchor="middle" font-size="10" fill="#687354">◷ 2 jam</text><text x="137" y="413" text-anchor="middle" font-size="10" fill="#687354">◇ Sedang</text><text x="215" y="413" text-anchor="middle" font-size="10" fill="#687354">★ 4.9</text>
+      <text x="26" y="462" font-size="18" font-weight="700" fill="#292d25">Bahan-bahan</text><text x="28" y="490" font-size="11" fill="#55574f">✓  Daging sapi, santan, serai...</text><text x="28" y="514" font-size="11" fill="#55574f">✓  Daun jeruk dan bumbu halus</text><text x="26" y="540" font-size="18" font-weight="700" fill="#292d25">Cara membuat</text>
+      <text x="140" y="580" text-anchor="middle" font-size="13" font-weight="700" fill="#687354">03 · DETAIL RESEP</text>
+    </g>
+  </g>
+</svg>
