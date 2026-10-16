@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Laporan UTS — Rasa Nusantara</title>
+<style>
+@page { size: A4; margin: 17mm 18mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #292d25; font: 10.5pt/1.58 Arial, sans-serif; }
+.page { min-height: 260mm; break-after: page; position: relative; }
+.page:last-child { break-after: auto; }
+.eyebrow { color: #687354; text-transform: uppercase; letter-spacing: 2px; font-size: 9pt; font-weight: bold; }
+h1 { font-size: 30pt; line-height: 1.14; margin: 10mm 0 4mm; }
+h2 { color: #687354; font-size: 18pt; margin: 0 0 7mm; }
+h3 { font-size: 12pt; margin: 6mm 0 2mm; }
+p { margin: 0 0 3mm; }
+.cover { height: 245mm; display: flex; flex-direction: column; justify-content: center; }
+.badge { display: inline-block; background: #e8ebdd; color: #687354; padding: 2mm 4mm; border-radius: 20mm; font-weight: bold; }
+.sub { color: #77796f; font-size: 13pt; }
+.coverbox { background: #f5f2e9; border: 1px solid #e9e5d8; border-radius: 7mm; padding: 8mm; margin-top: 14mm; }
+.meta { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 10mm; margin-top: 6mm; }
+.field { border-bottom: 1px solid #dad8cf; padding: 2mm 0; }
+.label { color: #85877d; font-size: 8.5pt; }
+.value { font-weight: bold; }
+.note { color: #8a6844; background: #fbf5e9; border-left: 3px solid #d4a25b; padding: 3mm 4mm; font-size: 9pt; margin: 5mm 0; }
+.screenshot { display: block; height: 135mm; max-width: 100%; object-fit: contain; object-position: left top; margin: 4mm auto; border: 1px solid #e4e1d8; }
+.caption { text-align: center; color: #77796f; font-size: 9pt; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.card { background: #f7f6f1; border: 1px solid #e9e7de; border-radius: 4mm; padding: 4mm; }
+code, pre { font: 8.5pt Consolas, monospace; background: #f4f3ee; }
+pre { white-space: pre-wrap; padding: 4mm; border-radius: 3mm; }
+ul, ol { padding-left: 6mm; margin: 2mm 0 4mm; }
+li { margin-bottom: 1.5mm; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; border-top: 1px solid #e5e2d9; padding-top: 3mm; color: #909187; font-size: 8pt; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<section class="page cover">
+  <div class="eyebrow">Laporan Ujian Tengah Semester · Mobile Programming</div>
+  <h1>Rasa<br>Nusantara</h1>
+  <p class="sub">Aplikasi resep masakan Indonesia</p>
+  <div style="font-size:48pt;margin:9mm 0 2mm">🍲 🌿 🍛</div>
+  <div class="coverbox">
+    <span class="badge">Semester Ganjil 2025/2026</span>
+    <div class="meta">
+      <div class="field"><div class="label">Nama</div><div class="value">Sri Mustika Indah Permata Putri</div></div>
+      <div class="field"><div class="label">NIM</div><div class="value">[LENGKAPI NIM]</div></div>
+      <div class="field"><div class="label">Kelas</div><div class="value">[LENGKAPI KELAS]</div></div>
+      <div class="field"><div class="label">Fakultas / Universitas</div><div class="value">[LENGKAPI]</div></div>
+    </div>
+    <div class="note">Sisipkan logo fakultas resmi dan lengkapi identitas sebelum laporan dikumpulkan.</div>
+  </div>
+  <div class="footer"><span>Rasa Nusantara</span><span>1</span></div>
+</section>
+
+<section class="page">
+  <div class="eyebrow">01 · Pendahuluan</div><h2>Resep rumahan, cerita Nusantara</h2>
+  <p>Rasa Nusantara adalah aplikasi mobile untuk menemukan inspirasi masakan Indonesia dan kreasi rumahan. Pengguna dapat menelusuri resep, membaca bahan serta langkah memasak, lalu menyimpan resep pilihan.</p>
+  <p>Tema ini dipilih karena resep merupakan informasi praktis yang mudah dijelajahi melalui perangkat mobile. Katalog resep juga dapat dikembangkan menjadi layanan yang mengambil data melalui API.</p>
+  <div class="grid" style="margin:7mm 0"><div class="card"><b>Tujuan</b><br>Menerapkan widget Flutter, layout responsif, navigasi antarlayar, dan data dummy terstruktur.</div><div class="card"><b>Pengembangan</b><br>Model data Recipe menjadi dasar untuk pemetaan JSON dan integrasi API.</div></div>
+  <div class="eyebrow" style="margin-top:9mm">02 · Perancangan antarmuka</div><h2>Hangat, bersih, mudah dibaca</h2>
+  <p>Latar krem <code>#FAF8F2</code> dan aksen hijau zaitun <code>#687354</code> membangun suasana rumahan. Kartu putih memisahkan informasi resep, judul tebal menandai hierarki, sementara abu-abu dipakai untuk teks pendukung. Ilustrasi emoji membuat tiap hidangan mudah dikenali tanpa gambar dari internet.</p>
+  <p>Beranda berisi sapaan, pencarian, resep pilihan, kategori, dan kartu populer. Navigasi utama memiliki tiga tab: Beranda, Jelajah, dan Tersimpan. Kartu resep membuka detail yang berisi informasi hidangan, bahan, serta urutan langkah memasak.</p>
+  <div class="footer"><span>Rasa Nusantara · Perancangan antarmuka</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <div class="eyebrow">Perancangan dan implementasi · Beranda</div><h2>Inspirasi masakan dalam satu layar</h2>
+  <p>Screenshot berikut menunjukkan implementasi halaman beranda pada target Flutter Web. Desain mengutamakan pencarian resep, akses cepat ke kategori, dan kartu hidangan pilihan.</p>
+  <img class="screenshot" src="screenshots/beranda_mobile.png" alt="Screenshot beranda Rasa Nusantara">
+  <div class="caption">Flutter Web · viewport 430 × 932 px.</div>
+  <div class="note">Lengkapi laporan dengan screenshot Jelajah dan Detail resep setelah aplikasi dijalankan pada perangkat/emulator.</div>
+  <div class="footer"><span>Rasa Nusantara · Tampilan aplikasi</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <div class="eyebrow">03 · Implementasi program</div><h2>Data terstruktur dan navigasi</h2>
+  <p>Model <code>Recipe</code> memuat id, nama, daerah asal, kategori, durasi, tingkat kesulitan, rating, deskripsi, bahan, dan langkah. Daftar dummy disimpan terpisah dari widget sehingga dapat diganti repository/API pada pengembangan berikutnya.</p>
+  <div class="grid"><div class="card"><b>Beranda</b><br>Resep pilihan, kategori, resep populer.</div><div class="card"><b>Jelajah</b><br>Pencarian nama/daerah dan filter kategori.</div><div class="card"><b>Detail resep</b><br>Deskripsi, informasi waktu, bahan, langkah.</div><div class="card"><b>Tersimpan</b><br>Koleksi resep favorit selama aplikasi aktif.</div></div>
+  <h3>Widget dan layout</h3>
+  <p>UI memakai <code>Scaffold</code>, <code>SafeArea</code>, <code>CustomScrollView</code>, <code>SliverList</code>, <code>ListView</code>, <code>Row</code>, <code>Column</code>, <code>Card</code>, <code>ChoiceChip</code>, <code>TextField</code>, dan <code>NavigationBar</code>.</p>
+  <h3>Alur navigasi</h3>
+  <pre>NavigationBar → Beranda / Jelajah / Tersimpan
+Pilih kartu resep → Navigator.push → Detail resep
+Tombol kembali → halaman sebelumnya</pre>
+  <h3>Struktur proyek</h3>
+  <pre>lib/main.dart    Model Recipe, data dummy, halaman, dan navigasi
+screenshots/     Tangkapan layar implementasi
+README.md        Ringkasan fitur dan langkah menjalankan aplikasi</pre>
+  <p>Jalankan dengan <code>flutter pub get</code> lalu <code>flutter run</code>. Data favorit saat ini dikelola di memori dan akan kembali ke nilai awal saat aplikasi dimulai ulang.</p>
+  <div class="footer"><span>Rasa Nusantara · Implementasi</span><span>4</span></div>
+</section>
+
+<section class="page">
+  <div class="eyebrow">04 · Hasil dan pembahasan</div><h2>Alur resep yang saling terhubung</h2>
+  <p>Prototipe memiliki tiga halaman utama melalui navigasi tab serta halaman detail yang dibuka dari kartu resep. Beranda memberi titik masuk melalui resep pilihan dan kategori; Jelajah menyediakan pencarian langsung dan filter; Tersimpan menampilkan resep yang ditandai. Objek Recipe yang sama diteruskan ke halaman detail sehingga informasi bahan dan langkah sesuai dengan kartu yang dipilih.</p>
+  <p>Layout berbasis scroll dan komponen yang fleksibel menjaga susunan informasi pada berbagai tinggi layar. Analisis statis Flutter selesai tanpa temuan. Build web berhasil dibuat untuk mendokumentasikan tampilan.</p>
+  <div class="note">Screenshot saat ini menampilkan beranda. Tambahkan tangkapan layar halaman Jelajah dan Detail dari emulator/perangkat jika laporan mensyaratkan dokumentasi setiap layar.</div>
+  <div class="eyebrow" style="margin-top:9mm">05 · Kesimpulan</div><h2>Prototipe siap dikembangkan</h2>
+  <p>Rasa Nusantara menerapkan navigasi tab, pencarian dan filter, daftar favorit, halaman detail, serta data dummy terstruktur dalam aplikasi Flutter. Pemisahan model resep membuat katalog siap dikembangkan ke data JSON/API. Tahap berikutnya dapat menambahkan penyimpanan favorit permanen, gambar hidangan, akun, dan pengujian pada berbagai perangkat.</p>
+  <div class="eyebrow" style="margin-top:9mm">Lampiran</div>
+  <ul><li>Source code dan instruksi penggunaan tersedia di README.md.</li><li>Repositori GitHub: [tautkan setelah repository dipublikasikan].</li><li>Google Drive: [unggah PDF final dan isi tautan berbagi].</li></ul>
+  <div class="footer"><span>Rasa Nusantara · Kesimpulan</span><span>5</span></div>
+</section>
+</body>
+</html>
