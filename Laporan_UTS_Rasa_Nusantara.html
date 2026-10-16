@@ -2,106 +2,150 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<title>Laporan UTS — Rasa Nusantara</title>
+<title>Laporan UTS Mobile Programming — Rasa Nusantara</title>
 <style>
-@page { size: A4; margin: 17mm 18mm; }
+@page { size: A4; margin: 16mm 19mm; }
 * { box-sizing: border-box; }
-body { margin: 0; color: #292d25; font: 10.5pt/1.58 Arial, sans-serif; }
-.page { min-height: 260mm; break-after: page; position: relative; }
+body { margin: 0; color: #24251f; font: 10.5pt/1.48 Arial, sans-serif; }
+.page { height: 265mm; break-after: page; position: relative; overflow: hidden; }
 .page:last-child { break-after: auto; }
-.eyebrow { color: #687354; text-transform: uppercase; letter-spacing: 2px; font-size: 9pt; font-weight: bold; }
-h1 { font-size: 30pt; line-height: 1.14; margin: 10mm 0 4mm; }
-h2 { color: #687354; font-size: 18pt; margin: 0 0 7mm; }
-h3 { font-size: 12pt; margin: 6mm 0 2mm; }
-p { margin: 0 0 3mm; }
-.cover { height: 245mm; display: flex; flex-direction: column; justify-content: center; }
-.badge { display: inline-block; background: #e8ebdd; color: #687354; padding: 2mm 4mm; border-radius: 20mm; font-weight: bold; }
-.sub { color: #77796f; font-size: 13pt; }
-.coverbox { background: #f5f2e9; border: 1px solid #e9e5d8; border-radius: 7mm; padding: 8mm; margin-top: 14mm; }
-.meta { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 10mm; margin-top: 6mm; }
-.field { border-bottom: 1px solid #dad8cf; padding: 2mm 0; }
-.label { color: #85877d; font-size: 8.5pt; }
-.value { font-weight: bold; }
-.note { color: #8a6844; background: #fbf5e9; border-left: 3px solid #d4a25b; padding: 3mm 4mm; font-size: 9pt; margin: 5mm 0; }
-.screenshot { display: block; height: 135mm; max-width: 100%; object-fit: contain; object-position: left top; margin: 4mm auto; border: 1px solid #e4e1d8; }
-.caption { text-align: center; color: #77796f; font-size: 9pt; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
-.card { background: #f7f6f1; border: 1px solid #e9e7de; border-radius: 4mm; padding: 4mm; }
-code, pre { font: 8.5pt Consolas, monospace; background: #f4f3ee; }
-pre { white-space: pre-wrap; padding: 4mm; border-radius: 3mm; }
-ul, ol { padding-left: 6mm; margin: 2mm 0 4mm; }
-li { margin-bottom: 1.5mm; }
-.footer { position: absolute; bottom: 0; left: 0; right: 0; border-top: 1px solid #e5e2d9; padding-top: 3mm; color: #909187; font-size: 8pt; display: flex; justify-content: space-between; }
+.cover { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 8mm; }
+.cover-title { font-size: 18pt; font-weight: bold; line-height: 1.4; margin: 0 0 2mm; }
+.cover-subtitle { font-size: 12pt; margin: 0; }
+.logo { width: 39mm; height: 39mm; object-fit: contain; margin: 15mm auto 11mm; }
+.identity { text-align: left; display: inline-block; font-size: 11pt; line-height: 1.8; margin: 4mm auto 0; }
+.institution { margin-top: auto; padding-bottom: 7mm; font-size: 11pt; font-weight: bold; line-height: 1.55; }
+h2 { font-size: 14pt; margin: 0 0 4mm; }
+h3 { font-size: 11pt; margin: 4mm 0 2mm; }
+p { margin: 0 0 2.5mm; text-align: justify; }
+ol, ul { margin: 1mm 0 3mm; padding-left: 7mm; }
+li { margin: 0 0 1mm; }
+.section { font-weight: bold; font-size: 14pt; margin: 0 0 5mm; }
+.footer { position: absolute; left: 0; right: 0; bottom: 0; border-top: 1px solid #aaa; padding-top: 2mm; font-size: 8pt; display: flex; justify-content: space-between; }
+code, pre { font: 8.5pt Consolas, monospace; }
+pre { white-space: pre-wrap; background: #f3f3f0; padding: 3mm; margin: 2mm 0 3mm; }
+.small { font-size: 9pt; }
+.design { width: 100%; height: 183mm; object-fit: contain; display: block; margin: 2mm auto; }
+.caption { text-align: center; font-size: 8.5pt; color: #57574f; margin: 1mm 0 4mm; }
+.placeholder { height: 91mm; border: 1.5px dashed #77816a; border-radius: 4mm; margin: 3mm 0 5mm; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #687354; text-align: center; background: #fbfaf6; }
+.placeholder strong { font-size: 12pt; letter-spacing: .4px; }
+.placeholder span { margin-top: 3mm; font-size: 9pt; color: #77796f; }
+.link { color: #1b5e35; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
 <section class="page cover">
-  <div class="eyebrow">Laporan Ujian Tengah Semester · Mobile Programming</div>
-  <h1>Rasa<br>Nusantara</h1>
-  <p class="sub">Aplikasi resep masakan Indonesia</p>
-  <div style="font-size:48pt;margin:9mm 0 2mm">🍲 🌿 🍛</div>
-  <div class="coverbox">
-    <span class="badge">Semester Ganjil 2025/2026</span>
-    <div class="meta">
-      <div class="field"><div class="label">Nama</div><div class="value">Sri Mustika Indah Permata Putri</div></div>
-      <div class="field"><div class="label">NIM</div><div class="value">240605110159</div></div>
-      <div class="field"><div class="label">Kelas</div><div class="value">L</div></div>
-      <div class="field"><div class="label">Tanggal</div><div class="value">16 Oktober 2026</div></div>
-    </div>
-    <div style="text-align:center;margin-top:7mm;font-weight:bold;line-height:1.55">JURUSAN TEKNIK INFORMATIKA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>UNIVERSITAS ISLAM NEGERI MAULANA MALIK IBRAHIM MALANG<br>MALANG · GANJIL 2025/2026</div>
-    <div class="note">Tambahkan logo resmi fakultas pada halaman judul sebelum laporan dikumpulkan.</div>
+  <p class="cover-title">LAPORAN UJIAN TENGAH SEMESTER<br>MOBILE PROGRAMMING</p>
+  <p class="cover-subtitle">(Aplikasi Resep Makanan Rasa Nusantara)</p>
+  <img class="logo" src="assets/logo_uin_malang.png" alt="Lambang UIN Maulana Malik Ibrahim Malang">
+  <div class="identity">
+    Nama&nbsp;&nbsp;&nbsp;&nbsp;: Sri Mustika Indah Permata Putri<br>
+    NIM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 240605110159<br>
+    Kelas&nbsp;&nbsp;&nbsp;&nbsp;: L
   </div>
-  <div class="footer"><span>Rasa Nusantara</span><span>1</span></div>
+  <div class="institution">JURUSAN TEKNIK INFORMATIKA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>UNIVERSITAS ISLAM NEGERI MAULANA MALIK IBRAHIM<br>MALANG<br>GANJIL 2025/2026</div>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>1</span></div>
 </section>
 
 <section class="page">
-  <div class="eyebrow">01 · Pendahuluan</div><h2>Resep rumahan, cerita Nusantara</h2>
-  <p>Rasa Nusantara adalah aplikasi mobile untuk menemukan inspirasi masakan Indonesia dan kreasi rumahan. Pengguna dapat menelusuri resep, membaca bahan serta langkah memasak, lalu menyimpan resep pilihan.</p>
-  <p>Tema ini dipilih karena resep merupakan informasi praktis yang mudah dijelajahi melalui perangkat mobile. Katalog resep juga dapat dikembangkan menjadi layanan yang mengambil data melalui API.</p>
-  <div class="grid" style="margin:7mm 0"><div class="card"><b>Tujuan</b><br>Menerapkan widget Flutter, layout responsif, navigasi antarlayar, dan data dummy terstruktur.</div><div class="card"><b>Pengembangan</b><br>Model data Recipe menjadi dasar untuk pemetaan JSON dan integrasi API.</div></div>
-  <div class="eyebrow" style="margin-top:9mm">02 · Perancangan antarmuka</div><h2>Hangat, bersih, mudah dibaca</h2>
-  <p>Latar krem <code>#FAF8F2</code> dan aksen hijau zaitun <code>#687354</code> membangun suasana rumahan. Kartu putih memisahkan informasi resep, judul tebal menandai hierarki, sementara abu-abu dipakai untuk teks pendukung. Ilustrasi emoji membuat tiap hidangan mudah dikenali tanpa gambar dari internet.</p>
-  <p>Beranda berisi sapaan, pencarian, resep pilihan, kategori, dan kartu populer. Navigasi utama memiliki tiga tab: Beranda, Jelajah, dan Tersimpan. Kartu resep membuka detail yang berisi informasi hidangan, bahan, serta urutan langkah memasak.</p>
-  <div class="footer"><span>Rasa Nusantara · Perancangan antarmuka</span><span>2</span></div>
+  <h2 class="section">2. Pendahuluan</h2>
+  <p>Rasa Nusantara adalah aplikasi resep makanan yang menyajikan inspirasi masakan Indonesia. Pengguna dapat melihat resep pilihan, mencari masakan berdasarkan nama atau daerah, menyaring daftar berdasarkan kategori, membaca petunjuk memasak, dan menyimpan resep favorit.</p>
+  <p>Tema kuliner dipilih karena resep merupakan informasi sehari-hari yang berguna dan mudah dipahami melalui perangkat mobile. Daftar resep yang terstruktur membantu pengguna menemukan ide masakan, sementara detail bahan dan langkah memasak dapat dibaca langsung ketika menyiapkan hidangan.</p>
+  <p>Pengembangan aplikasi ini relevan dengan pemrograman mobile karena menerapkan antarmuka yang dapat digulir, navigasi ant halaman, interaksi pencarian dan filter, serta penyajian data pada layar berukuran kecil. Data contoh disimpan lokal untuk tahap rancangan dan dapat disambungkan ke API ketika layanan server tersedia.</p>
+  <h3>Tujuan</h3>
+  <ol>
+    <li>Membuat antarmuka aplikasi resep menggunakan Flutter dan bahasa Dart.</li>
+    <li>Menerapkan halaman Beranda, Jelajah, Detail Resep, dan Tersimpan dengan navigasi yang saling terhubung.</li>
+    <li>Mengolah data dummy secara terstruktur agar mudah dikembangkan untuk integrasi API.</li>
+    <li>Menerapkan tata letak yang rapi dan proporsional pada ukuran layar yang berbeda.</li>
+  </ol>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>2</span></div>
 </section>
 
 <section class="page">
-  <div class="eyebrow">Perancangan dan implementasi · Beranda</div><h2>Inspirasi masakan dalam satu layar</h2>
-  <p>Screenshot berikut menunjukkan implementasi halaman beranda pada target Flutter Web. Desain mengutamakan pencarian resep, akses cepat ke kategori, dan kartu hidangan pilihan.</p>
-  <img class="screenshot" src="screenshots/beranda_mobile.png" alt="Screenshot beranda Rasa Nusantara">
-  <div class="caption">Flutter Web · viewport 430 × 932 px.</div>
-  <div class="note">Lengkapi laporan dengan screenshot Jelajah dan Detail resep setelah aplikasi dijalankan pada perangkat/emulator.</div>
-  <div class="footer"><span>Rasa Nusantara · Tampilan aplikasi</span><span>3</span></div>
+  <h2 class="section">3. Perancangan Antarmuka (UI Design)</h2>
+  <p>Antarmuka dirancang dengan tema masakan Nusantara dan prinsip clean interface. Latar krem <code>#FAF8F2</code> memberi kesan hangat, aksen hijau zaitun <code>#687354</code> dipakai untuk tombol dan penanda aktif, sedangkan kartu putih membedakan kelompok informasi dari latar.</p>
+  <p>Ikon Material digunakan untuk pencarian, kategori, bookmark, waktu, dan navigasi. Ilustrasi emoji makanan menjadi penanda visual tiap resep. Tipografi sans serif dengan judul tegas dan teks isi yang lebih kecil membentuk hierarki informasi. Tata letak memakai kartu, jarak antarelemen yang konsisten, serta area gulir untuk daftar yang panjang.</p>
+  <p>Gambar berikut adalah rancangan awal mandiri yang dibuat sebagai acuan visual untuk tiga halaman utama aplikasi.</p>
+  <img class="design" src="assets/ui_design_rasa_nusantara.svg" alt="Rancangan UI Beranda, Jelajah, dan Detail Resep">
+  <p class="caption">Gambar 1. Rancangan awal antarmuka Rasa Nusantara.</p>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>3</span></div>
 </section>
 
 <section class="page">
-  <div class="eyebrow">03 · Implementasi program</div><h2>Data terstruktur dan navigasi</h2>
-  <p>Model <code>Recipe</code> memuat id, nama, daerah asal, kategori, durasi, tingkat kesulitan, rating, deskripsi, bahan, dan langkah. Daftar dummy disimpan terpisah dari widget sehingga dapat diganti repository/API pada pengembangan berikutnya.</p>
-  <div class="grid"><div class="card"><b>Beranda</b><br>Resep pilihan, kategori, resep populer.</div><div class="card"><b>Jelajah</b><br>Pencarian nama/daerah dan filter kategori.</div><div class="card"><b>Detail resep</b><br>Deskripsi, informasi waktu, bahan, langkah.</div><div class="card"><b>Tersimpan</b><br>Koleksi resep favorit selama aplikasi aktif.</div></div>
-  <h3>Widget dan layout</h3>
-  <p>UI memakai <code>Scaffold</code>, <code>SafeArea</code>, <code>CustomScrollView</code>, <code>SliverList</code>, <code>ListView</code>, <code>Row</code>, <code>Column</code>, <code>Card</code>, <code>ChoiceChip</code>, <code>TextField</code>, dan <code>NavigationBar</code>.</p>
-  <h3>Alur navigasi</h3>
-  <pre>NavigationBar → Beranda / Jelajah / Tersimpan
-Pilih kartu resep → Navigator.push → Detail resep
-Tombol kembali → halaman sebelumnya</pre>
-  <h3>Struktur proyek</h3>
-  <pre>lib/main.dart    Model Recipe, data dummy, halaman, dan navigasi
-screenshots/     Tangkapan layar implementasi
-README.md        Ringkasan fitur dan langkah menjalankan aplikasi</pre>
-  <p>Jalankan dengan <code>flutter pub get</code> lalu <code>flutter run</code>. Data favorit saat ini dikelola di memori dan akan kembali ke nilai awal saat aplikasi dimulai ulang.</p>
-  <div class="footer"><span>Rasa Nusantara · Implementasi</span><span>4</span></div>
+  <h2 class="section">4. Implementasi Program</h2>
+  <h3>Struktur halaman dan navigasi</h3>
+  <p>Aplikasi memiliki tiga halaman utama yang dipilih melalui <code>NavigationBar</code>: Beranda, Jelajah, dan Tersimpan. Beranda menampilkan resep pilihan dan kategori; Jelajah menampilkan pencarian, filter kategori, serta daftar resep; Tersimpan menampilkan resep yang ditandai. Pemilihan kartu resep membuka halaman Detail Resep melalui <code>Navigator.push</code>.</p>
+  <h3>Widget dan tata letak</h3>
+  <p>Widget yang digunakan antara lain <code>Scaffold</code>, <code>SafeArea</code>, <code>CustomScrollView</code>, <code>SliverList</code>, <code>ListView</code>, <code>Row</code>, <code>Column</code>, <code>Container</code>, <code>Card</code>, <code>ChoiceChip</code>, dan <code>TextField</code>. Konten dibatasi maksimal 760 piksel pada layar lebar dan mengikuti lebar layar ponsel.</p>
+  <h3>Contoh navigasi</h3>
+  <pre>NavigationBar(
+  selectedIndex: _tab,
+  onDestinationSelected: (index) =&gt; setState(() =&gt; _tab = index),
+  destinations: const [/* Beranda, Jelajah, Tersimpan */],
+)
+
+_navigatorKey.currentState?.push(MaterialPageRoute&lt;void&gt;(
+  builder: (_) =&gt; RecipeDetailPage(
+    recipe: recipe,
+    isSaved: _saved.contains(recipe.id),
+    onToggleSaved: () =&gt; _toggleSaved(recipe),
+  ),
+));</pre>
+  <h3>Pengolahan data dummy</h3>
+  <p>Lima resep lokal berada pada <code>lib/data/sample_recipes.dart</code>. Model <code>Recipe</code> di <code>lib/models/recipe.dart</code> menyediakan <code>fromJson</code> dan <code>toJson</code>, sehingga bentuk data sudah dapat dipetakan ke payload JSON dari API.</p>
+  <pre>factory Recipe.fromJson(Map&lt;String, dynamic&gt; json) =&gt; Recipe(
+  id: json['id'] as String,
+  name: json['name'] as String,
+  category: json['category'] as String? ?? 'Lainnya',
+  // properti resep lainnya dipetakan dari JSON
+);</pre>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>4</span></div>
 </section>
 
 <section class="page">
-  <div class="eyebrow">04 · Hasil dan pembahasan</div><h2>Alur resep yang saling terhubung</h2>
-  <p>Prototipe memiliki tiga halaman utama melalui navigasi tab serta halaman detail yang dibuka dari kartu resep. Beranda memberi titik masuk melalui resep pilihan dan kategori; Jelajah menyediakan pencarian langsung dan filter; Tersimpan menampilkan resep yang ditandai. Objek Recipe yang sama diteruskan ke halaman detail sehingga informasi bahan dan langkah sesuai dengan kartu yang dipilih.</p>
-  <p>Layout berbasis scroll dan komponen yang fleksibel menjaga susunan informasi pada berbagai tinggi layar. Analisis statis Flutter selesai tanpa temuan. Build web berhasil dibuat untuk mendokumentasikan tampilan.</p>
-  <div class="note">Screenshot saat ini menampilkan beranda. Tambahkan tangkapan layar halaman Jelajah dan Detail dari emulator/perangkat jika laporan mensyaratkan dokumentasi setiap layar.</div>
-  <div class="eyebrow" style="margin-top:9mm">05 · Kesimpulan</div><h2>Prototipe siap dikembangkan</h2>
-  <p>Rasa Nusantara menerapkan navigasi tab, pencarian dan filter, daftar favorit, halaman detail, serta data dummy terstruktur dalam aplikasi Flutter. Pemisahan model resep membuat katalog siap dikembangkan ke data JSON/API. Tahap berikutnya dapat menambahkan penyimpanan favorit permanen, gambar hidangan, akun, dan pengujian pada berbagai perangkat.</p>
-  <div class="eyebrow" style="margin-top:9mm">Lampiran</div>
-  <ul><li>Source code dan instruksi penggunaan tersedia di README.md.</li><li>Link repositori GitHub: <a href="https://github.com/mustikaprmataputrii/resep-nusantara">https://github.com/mustikaprmataputrii/resep-nusantara</a> (branch <code>main</code>).</li><li>Link Google Drive laporan: unggah PDF final ke Google Drive dan aktifkan akses berbagi sebelum dikumpulkan.</li></ul>
-  <div class="footer"><span>Rasa Nusantara · Kesimpulan</span><span>5</span></div>
+  <h2 class="section">4. Implementasi Program (lanjutan)</h2>
+  <p>Tempatkan screenshot hasil aplikasi pada area yang disediakan. Screenshot dapat ditambahkan dengan mengganti kotak placeholder di file HTML laporan.</p>
+  <h3>A. Halaman Beranda</h3>
+  <div class="placeholder"><strong>TEMPEL SCREENSHOT BERANDA DI SINI</strong><span>Area screenshot aplikasi — viewport ponsel</span></div>
+  <h3>B. Halaman Daftar Data / Jelajah</h3>
+  <div class="placeholder"><strong>TEMPEL SCREENSHOT JELAJAH DI SINI</strong><span>Area screenshot aplikasi — viewport ponsel</span></div>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>5</span></div>
+</section>
+
+<section class="page">
+  <h2 class="section">4. Implementasi Program (lanjutan)</h2>
+  <h3>C. Halaman Detail Resep</h3>
+  <div class="placeholder"><strong>TEMPEL SCREENSHOT DETAIL DI SINI</strong><span>Area screenshot aplikasi — viewport ponsel</span></div>
+  <h3>D. Halaman Resep Tersimpan</h3>
+  <div class="placeholder"><strong>TEMPEL SCREENSHOT TERSIMPAN DI SINI</strong><span>Area screenshot aplikasi — viewport ponsel</span></div>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>6</span></div>
+</section>
+
+<section class="page">
+  <h2 class="section">5. Hasil dan Pembahasan</h2>
+  <p>Hasil implementasi mengikuti konsep rancangan dengan latar krem, aksen hijau zaitun, kartu berwarna putih, ikon yang sesuai fungsi, dan hierarki teks yang jelas. Rancangan awal menampilkan susunan Beranda, Jelajah, dan Detail; susunan tersebut diterapkan menjadi halaman Flutter dengan komponen yang dapat digulir dan elemen interaktif.</p>
+  <h3>Fungsi dan interaksi setiap halaman</h3>
+  <ol>
+    <li><b>Beranda:</b> pengguna melihat resep pilihan dan kategori, lalu dapat membuka resep atau menuju Jelajah.</li>
+    <li><b>Jelajah:</b> pengguna mengetik kata kunci nama/daerah dan memilih kategori untuk menyaring daftar. Kartu resep membuka detail, sedangkan ikon bookmark menyimpan resep.</li>
+    <li><b>Detail Resep:</b> pengguna membaca deskripsi, durasi, tingkat kesulitan, bahan, dan langkah memasak. Tombol bookmark mengubah status simpan.</li>
+    <li><b>Tersimpan:</b> pengguna melihat resep yang sudah ditandai dan dapat membukanya kembali.</li>
+  </ol>
+  <p>Navigasi utama memakai <code>NavigationBar</code>, sedangkan perpindahan menuju detail memakai <code>Navigator.push</code>. Pencarian, filter kategori, dan bookmark memberi respons langsung pada data lokal. Pemeriksaan <code>flutter analyze --no-pub</code> tidak menemukan masalah dan build Flutter Web berhasil dibuat.</p>
+  <p>Konten utama dibatasi lebarnya di layar besar dan dapat mengikuti lebar ponsel. Tampilan masih dapat dikembangkan dengan gambar hidangan, penyimpanan favorit permanen, dan data dari API.</p>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>7</span></div>
+</section>
+
+<section class="page">
+  <h2 class="section">6. Kesimpulan</h2>
+  <p>Aplikasi Rasa Nusantara berhasil dirancang dan diimplementasikan menggunakan Flutter dan Dart. Aplikasi menyediakan halaman Beranda, Jelajah, Detail Resep, dan Tersimpan dengan navigasi antarlayar. Widget Flutter digunakan untuk menyusun layout, menampilkan data resep, serta menerima interaksi pencarian, filter kategori, dan penyimpanan favorit.</p>
+  <p>Data dummy telah dipisahkan dari antarmuka dan menggunakan model yang mendukung pemetaan JSON sebagai dasar integrasi API. Analisis statis bersih dan build Flutter Web berhasil. Rancangan UI mandiri digunakan sebagai acuan visual implementasi.</p>
+  <p>Pengembangan selanjutnya dapat mencakup integrasi API, penyimpanan favorit secara permanen, foto resep, serta pengujian pada berbagai ukuran perangkat.</p>
+  <h3>Repository dan commit project</h3>
+  <p>Repository: <a class="link" href="https://github.com/mustikaprmataputrii/resep-nusantara">https://github.com/mustikaprmataputrii/resep-nusantara</a></p>
+  <p>Branch: <code>main</code> · Commit project: <code>a29f7d4</code>.</p>
+  <div class="footer"><span>Laporan UTS Mobile Programming</span><span>8</span></div>
 </section>
 </body>
 </html>

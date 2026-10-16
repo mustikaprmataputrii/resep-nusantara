@@ -1,89 +1,64 @@
-# Laporan UTS Mobile Programming — Rasa Nusantara
+# LAPORAN UJIAN TENGAH SEMESTER MOBILE PROGRAMMING
 
-> Laporan mengikuti susunan tugas UTS dan gaya visual template praktikum yang diberikan. Tambahkan logo resmi fakultas dan screenshot halaman Jelajah/Detail sebelum dikumpulkan.
+## Aplikasi Resep Makanan Rasa Nusantara
 
-## Halaman Judul
+Nama: Sri Mustika Indah Permata Putri  
+NIM: 240605110159  
+Kelas: L
 
-**RASA NUSANTARA — APLIKASI RESEP MASAKAN INDONESIA**  
-Laporan Ujian Tengah Semester Mobile Programming  
-Semester Ganjil 2025/2026
+**JURUSAN TEKNIK INFORMATIKA**  
+**FAKULTAS SAINS DAN TEKNOLOGI**  
+**UNIVERSITAS ISLAM NEGERI MAULANA MALIK IBRAHIM MALANG**  
+**GANJIL 2025/2026**
 
-- Nama: Sri Mustika Indah Permata Putri
-- NIM: 240605110159
-- Kelas: L
-- Jurusan: Teknik Informatika
-- Fakultas: Sains dan Teknologi
-- Universitas: Universitas Islam Negeri Maulana Malik Ibrahim Malang
-- Tanggal: 16 Oktober 2026
-- Logo fakultas: **[sisipkan logo resmi]**
+## 2. Pendahuluan
 
-## 1. Pendahuluan
+Rasa Nusantara adalah aplikasi resep makanan yang menyajikan inspirasi masakan Indonesia. Pengguna dapat melihat resep pilihan, mencari masakan berdasarkan nama atau daerah, menyaring daftar berdasarkan kategori, membaca petunjuk memasak, dan menyimpan resep favorit.
 
-Rasa Nusantara adalah aplikasi mobile untuk menjelajahi resep masakan Indonesia dan kreasi rumahan. Aplikasi menampilkan resep secara ringkas, lalu menyediakan bahan dan cara memasak dalam halaman detail. Tema ini dipilih karena resep merupakan informasi praktis yang mudah dijelajahi melalui perangkat mobile dan dapat dikembangkan dengan katalog/API resep.
+Tema kuliner dipilih karena resep merupakan informasi sehari-hari yang berguna dan mudah dipahami melalui perangkat mobile. Daftar resep terstruktur membantu pengguna menemukan ide masakan, sedangkan detail bahan dan langkah memasak dapat dibaca saat menyiapkan hidangan.
 
-Tujuan proyek adalah menerapkan widget Flutter, layout responsif, navigasi ant halaman, serta pengolahan data dummy terstruktur. Data disimpan dalam model `Recipe` agar nantinya dapat dipetakan dari JSON API.
+Pengembangan ini relevan dengan pemrograman mobile karena menerapkan antarmuka yang dapat digulir, navigasi ant halaman, interaksi pencarian dan filter, serta penyajian data pada layar berukuran kecil. Data contoh disimpan lokal untuk tahap rancangan dan dapat disambungkan ke API ketika layanan server tersedia.
 
-## 2. Perancangan Antarmuka (UI Design)
+Tujuan aplikasi adalah membuat antarmuka resep menggunakan Flutter/Dart, menerapkan halaman yang saling terhubung, mengolah data dummy terstruktur, dan menyusun tata letak yang proporsional pada berbagai ukuran layar.
 
-Konsep visual memakai gaya editorial kuliner yang bersih dan hangat. Latar krem (`#FAF8F2`) memberi kesan rumahan, aksen hijau zaitun (`#687354`) dipakai untuk navigasi dan tindakan utama, sedangkan kartu putih menjaga keterbacaan. Judul memakai hierarki tebal, informasi pendukung memakai abu-abu, dan ilustrasi emoji makanan memberi identitas hidangan tanpa aset eksternal.
+## 3. Perancangan Antarmuka (UI Design)
 
-Struktur layar dirancang sebagai berikut:
+Antarmuka memakai tema masakan Nusantara dan prinsip clean interface. Latar krem (`#FAF8F2`) memberi kesan hangat, aksen hijau zaitun (`#687354`) dipakai untuk tombol dan penanda aktif, sedangkan kartu putih membedakan kelompok informasi dari latar.
 
-1. Beranda: identitas aplikasi, sapaan, pencarian, kartu resep pilihan, kategori, resep populer.
-2. Jelajah: kolom pencarian, filter kategori, dan daftar kartu resep.
-3. Detail: ilustrasi hidangan, informasi ringkas, bahan, dan langkah.
-4. Tersimpan: daftar favorit yang dipilih pengguna.
+Ikon Material digunakan untuk pencarian, kategori, bookmark, waktu, dan navigasi. Emoji makanan menjadi penanda visual tiap resep. Tipografi sans serif dengan judul tegas dan teks isi yang lebih kecil membentuk hierarki informasi. Tata letak memakai kartu, jarak antarelemen konsisten, serta area gulir untuk daftar panjang.
 
-**Desain awal / referensi:** rancangan mandiri berdasarkan prinsip clean interface; komponen visual diterapkan langsung pada widget Flutter.  
-**Sisipkan gambar desain/screenshot beranda di sini.**
+Rancangan awal mandiri yang menjadi acuan visual disertakan pada `assets/ui_design_rasa_nusantara.svg` dan ditampilkan di bagian ini pada versi PDF.
 
-## 3. Implementasi Program
+## 4. Implementasi Program
 
-Seluruh implementasi awal berada di `lib/main.dart` agar mudah dijalankan. `Recipe` menyimpan identitas, nama, asal, kategori, durasi, tingkat kesulitan, rating, warna/ilustrasi, deskripsi, bahan, dan langkah. Daftar `recipes` menjadi sumber data dummy.
+### Struktur halaman dan navigasi
 
-`ResepNusantaraApp` mengelola navigasi tab menggunakan `NavigationBar` dan `IndexedStack`. Daftar resep dapat difilter berdasarkan pencarian dan kategori. Pemilihan resep membuka `RecipeDetailPage` melalui `Navigator.push`. Status tersimpan diangkat ke state aplikasi agar perubahan pada kartu ikut terlihat pada tab Tersimpan.
+- **Beranda:** resep pilihan, kategori, dan resep populer.
+- **Jelajah:** pencarian nama/daerah, filter kategori, dan daftar resep.
+- **Detail Resep:** deskripsi, durasi, kesulitan, bahan, dan langkah memasak.
+- **Tersimpan:** daftar resep yang ditandai favorit.
 
-Widget/layout yang digunakan meliputi `Scaffold`, `SafeArea`, `CustomScrollView`, `SliverAppBar`, `SliverList`, `ListView`, `Row`, `Column`, `Card`, `ChoiceChip`, `TextField`, dan `NavigationBar`.
+`NavigationBar` menghubungkan Beranda, Jelajah, dan Tersimpan. Pemilihan resep membuka Detail Resep melalui `NavigatorState.push` dengan `MaterialPageRoute`.
 
-**Cuplikan model data:**
+### Widget, layout, dan data
 
-```dart
-class Recipe {
-  const Recipe({required this.id, required this.name, required this.region,
-    required this.category, required this.duration, required this.difficulty,
-    required this.rating, required this.emoji, required this.color,
-    required this.description, required this.ingredients, required this.steps});
-  final String id, name, region, category, duration, difficulty, emoji, description;
-  final double rating;
-  final Color color;
-  final List<String> ingredients, steps;
-}
-```
+Widget yang digunakan antara lain `Scaffold`, `SafeArea`, `CustomScrollView`, `SliverList`, `ListView`, `Row`, `Column`, `Container`, `Card`, `ChoiceChip`, `TextField`, dan `NavigationBar`. Konten dibatasi maksimal 760 piksel pada layar lebar dan mengikuti lebar layar ponsel.
 
-**Cuplikan navigasi detail:**
+Data lima resep lokal berada di `lib/data/sample_recipes.dart`. Model `Recipe` di `lib/models/recipe.dart` menyediakan `fromJson` dan `toJson` untuk memudahkan pemetaan data API di tahap berikutnya.
 
-```dart
-Navigator.of(context).push(MaterialPageRoute<void>(
-  builder: (_) => RecipeDetailPage(recipe: recipe, ...),
-));
-```
+Cuplikan kode navigasi dan pemetaan JSON disediakan di PDF. **Screenshot hasil belum dimasukkan:** halaman PDF 5–6 menyediakan area kosong untuk screenshot Beranda, Jelajah, Detail Resep, dan Tersimpan.
 
-**Sisipkan screenshot implementasi beranda, jelajah, dan detail resep di sini.**
+## 5. Hasil dan Pembahasan
 
-## 4. Hasil dan Pembahasan
+Implementasi mengikuti rancangan melalui warna krem dan hijau zaitun, kartu putih, ikon yang sesuai fungsi, serta hierarki teks yang jelas. Pengguna dapat berpindah antarhalaman utama melalui `NavigationBar`; kartu resep membuka detail; pencarian dan filter menyaring data lokal; tombol bookmark memperbarui daftar Tersimpan.
 
-Hasil implementasi mencakup empat tampilan/fungsi yang terhubung. Beranda memberi titik masuk berupa resep pilihan dan kategori; Jelajah menyediakan pencarian langsung dan filter; Detail menyajikan informasi memasak secara berurutan; Tersimpan memuat resep pilihan pengguna. Navigasi tab tetap tersedia pada halaman utama, sementara tombol kartu membawa pengguna ke detail dan tombol kembali membawa pengguna ke daftar.
+Konten dibatasi lebarnya di layar besar dan dapat mengikuti lebar ponsel. Pemeriksaan `flutter analyze --no-pub` tidak menemukan masalah dan build Flutter Web berhasil dibuat. Pengembangan berikutnya dapat menambahkan foto resep, penyimpanan favorit permanen, integrasi API, dan pengujian pada beragam perangkat.
 
-Layout menggunakan area gulir vertikal dan komponen yang menyesuaikan lebar layar. Data resep terhubung dari kartu ke halaman detail melalui objek `Recipe` yang sama. Favorit dikelola dalam memori, sehingga belum bertahan setelah aplikasi ditutup.
+## 6. Kesimpulan
 
-**Perbandingan desain dan implementasi:** struktur visual yang dirancang—warna hangat, aksen zaitun, kartu resep, pencarian, kategori, dan detail bertahap—diterapkan dalam widget. Tambahkan screenshot final untuk menunjukkan kesesuaian pada perangkat yang digunakan.
+Aplikasi Rasa Nusantara berhasil dirancang dan diimplementasikan menggunakan Flutter dan Dart. Aplikasi memiliki halaman Beranda, Jelajah, Detail Resep, dan Tersimpan dengan navigasi antarlayar. Widget Flutter digunakan untuk menyusun layout, menampilkan data resep, serta menerima interaksi pencarian, filter, dan penyimpanan favorit.
 
-## 5. Kesimpulan
+Data dummy dipisahkan dari antarmuka dan model mendukung pemetaan JSON sebagai dasar integrasi API. Analisis statis bersih, build Flutter Web berhasil, dan rancangan UI mandiri menjadi acuan visual implementasi.
 
-Proyek menghasilkan prototipe Flutter resep makanan dengan navigasi tab dan halaman detail, pencarian/filter resep, serta data dummy yang terstruktur. Model resep memudahkan pengembangan ke integrasi API. Pengembangan selanjutnya dapat menambahkan penyimpanan favorit permanen, gambar hidangan, data JSON/API, dan pengujian pada beberapa ukuran perangkat.
-
-## Lampiran
-
-- Source code dan petunjuk menjalankan aplikasi: `README.md`.
-- Tangkapan layar hasil implementasi: **[tambahkan setelah menjalankan aplikasi]**.
-- Tautan repositori GitHub: https://github.com/mustikaprmataputrii/resep-nusantara (branch `main`).
+**Repository:** https://github.com/mustikaprmataputrii/resep-nusantara  
+**Branch:** `main` · **Commit project:** `a29f7d4`
